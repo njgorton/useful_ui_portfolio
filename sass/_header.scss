@@ -1,0 +1,91 @@
+.header {      
+    color: $color-white;
+    background-image: linear-gradient(to right,
+    rgba(0,0,0,.1),
+    rgba(0,0,0,.6)),
+    url(../img/hero.jpg);    
+    background-size: 100% 100%;
+    width: 100%;     
+    height: 100vh; 
+    margin-top: 7rem; 
+    position: relative;  
+
+    &__container {
+        position: relative;        
+        width: 100%;
+        height: 100%;
+        margin: auto auto;
+    }
+
+    &__primary { 
+        position: absolute;                    
+        font-size: 5rem; 
+        font-weight: 300;       
+        top: 10%;
+        left: 15%;
+    }
+
+    &__secondary {
+        position: absolute;
+        font-size: 3.5rem;
+        font-weight: 300;
+
+        &--1 {
+            top: 30%; 
+            left: 30%;
+        }
+
+        &--2 {
+            top: 60%;
+            left: 30%;
+        }
+    }
+
+    &__tertiary {
+        position: absolute;
+        font-size: 2.5rem;
+        top: 40%;
+        left: 45%;
+
+        &--1 {
+            font-weight: 300;  
+        }
+
+        &--2 {
+            font-weight: 300;
+        }
+    }
+
+    &__scroll-container {
+        position: absolute;
+        display: inline-block;       
+        top: 80%;
+        left: 50%;        
+        transform: translateX(-50%);
+        
+        .scroll-arrow {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 4rem;
+            height: 4rem;            
+            animation: jump 1.2s infinite;            
+
+            &__left-side {              
+                width: 2px;                
+                background-color: $color-white;                
+                box-shadow: -1.5rem 1.5rem 1.5rem rgba(0, 0, 0, 0.9);
+                transform: rotate(-50deg) translateY(.2rem);
+                transform-origin: bottom;                
+            }
+
+            &__right-side {                
+                width: 2px;                
+                background-color: $color-white;                
+                box-shadow: 1.5rem 1.5rem 1.5rem rgba(0, 0, 0, 0.9);
+                transform: rotate(50deg) translateY(.2rem);
+                transform-origin: bottom;                
+            }
+        }     
+    }
+}

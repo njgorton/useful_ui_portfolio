@@ -1,0 +1,28 @@
+// COLOR VARIABLES
+$color-white: #f5f1ed;
+$color-teal: rgb(29,104,88);
+$color-blue: #1c3144;
+$color-dark: #232323;
+
+// RESPONSIVE BREAKPOINTS
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px / 16px = 62.5%
+    font-family: 'Josefin Slab', serif;
+    font-weight: 300; 
+}
+
+::selection {
+    background-color: $color-teal;
+    color: $color-white;
+}
