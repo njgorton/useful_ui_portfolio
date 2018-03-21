@@ -15,12 +15,13 @@
   "author": "Nathaniel Gorton",
   "license": "ISC",
   "dependencies": {
-    "module": "0.0.x",
     "autoprefixer": "^8.0.0",
     "concat": "^1.0.3",
     "devicon": "^2.0.0",
+    "module": "0.0.x",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
-    "postcss-cli": "^5.0.0"
+    "postcss-cli": "^5.0.0",
+    "surge": "^0.20.1"
   }
 }

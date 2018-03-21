@@ -12,3 +12,29 @@
         bottom: 0;
     }
 } 
+
+// HEADERS TERTIARY SLIDE-IN LEFT
+@keyframes header-tert-slide-in-left {
+    0% {
+        transform: translateX(150%);
+        opacity: 0;        
+    }
+
+    100% {
+       transform: translateX(initial);
+       opacity: 1; 
+    }
+}
+
+// HEADER SECONDARY--2 SLIDE-UP
+@keyframes header-sec--2-slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;        
+    }
+
+    100% {
+       transform: translateY(initial);
+       opacity: 1; 
+    }
+}
