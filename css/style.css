@@ -336,18 +336,19 @@ html {
     overflow-x: hidden; }
   .header__primary {
     position: absolute;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 300;
     top: 10%;
     left: 15%; }
   .header__secondary {
     position: absolute;
-    font-size: 3.5rem;
     font-weight: 300; }
     .header__secondary--1 {
+      font-size: 5rem;
       top: 30%;
       left: 30%; }
     .header__secondary--2 {
+      font-size: 4rem;
       top: 60%;
       left: 30%;
       display: inline-block;
@@ -355,7 +356,7 @@ html {
       animation: header-sec--2-slide-up .8s 1.5s ease-out forwards; }
   .header__tertiary {
     position: absolute;
-    font-size: 2.5rem;
+    font-size: 3rem;
     top: 40%;
     left: 45%; }
     .header__tertiary--1 {
