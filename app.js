@@ -1,3 +1,8 @@
+// AOS SETTINGS
+AOS.init({
+  duration: 800
+ });
+
 //============================CARD FLIP ON CLICK==============================
 
 $('document').ready(function() {
