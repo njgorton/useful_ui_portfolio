@@ -21,7 +21,9 @@ html {
     font-family: 'Josefin Slab', serif;
     font-weight: 300; 
 }
-
+body {
+    overflow-x: hidden;
+}
 ::selection {
     background-color: $color-teal;
     color: $color-white;

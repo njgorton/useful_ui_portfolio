@@ -1,11 +1,11 @@
 .about { 
     background-color: $color-white;
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0%, 100% 15%, 100% 100%, 0 85%);
+    clip-path: polygon(0 0%, 100% 15%, 100% 100%, 0 85%);       
     margin-top: -35rem;
     padding-bottom: 15rem;
-    position: relative;
-    z-index: 1;
+    position: relative;    
+    z-index: 1;   
 
     &__treeBar {  
         background-image: url(../img/tree.jpg);
@@ -96,11 +96,11 @@
                 position: relative;
                 perspective: 45rem;            
             
-                img {                
+                img {                                 
                     width: 100%; 
                     height: 100%;
                     box-shadow: 2rem 1rem 2rem rgba(0,0,0, .3); 
-                    transform: rotateY(-10deg);                  
+                    //transform: rotateY(-10deg);                  
                 }
             }  
         }
