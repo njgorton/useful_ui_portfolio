@@ -5,8 +5,20 @@
     height: 100%;
     padding-top: 1rem;
     padding-bottom: 15rem;   
-    margin-top: -25rem; //was -20
+    margin-top: -25rem;
     position: relative;
+
+    @media only screen and (max-width: $bp-medium) {
+        -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+        clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);  
+        margin-top: -20rem;      
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        -webkit-clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
+        clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);  
+        margin-top: -15rem;      
+    }
 
     &__shroomBar {  
         background-image: url(../img/shroom-tree.jpg);
@@ -16,6 +28,10 @@
         right: 10rem;
         width: 30rem;
         height: 100%;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none;     
+        }
     }
 
     &__header {
@@ -27,18 +43,29 @@
             width: 70%;   
             padding: 5% 0;
             margin: 0 auto;
-            margin-top: 25rem; //was 20         
+            margin-top: 25rem;      
             margin-bottom: 10rem;
-            box-shadow: -2rem 2rem 4rem rgba(0,0,0, .2);             
+            box-shadow: -2rem 2rem 4rem rgba(0,0,0, .2);  
+            
+            @media only screen and (max-width: $bp-medium) {
+                margin-top: 20rem;        
+            }
+
+            @media only screen and (max-width: $bp-smallest) {
+                margin-top: 15rem;
+            }
         }
 
         &--secondary {
             color: $color-white;
             font-size: 3rem;
             text-align: center;                     
-            width: 100%;
-            padding-bottom: 1rem;        
-            margin-bottom: 2rem;       
+            width: 100%;       
+            margin-bottom: 3rem;  
+            
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 2.5rem;
+            }
         }
 
         &--tertiary {
@@ -46,7 +73,16 @@
             margin: auto 0;
             width: 50%;             
             color: $color-white;
-            font-size: 3rem;       
+            font-size: 3rem; 
+            
+            @media only screen and (max-width: $bp-medium) {
+                margin: 0 auto;
+                margin-bottom: 3rem;          
+            }
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 2.5rem;
+            }
         }
     }
 
@@ -55,7 +91,19 @@
 
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;      
+        justify-content: space-between;
+        
+        @media only screen and (max-width: $bp-medium) {
+           flex-direction: column;          
+        }
+
+        @media only screen and (max-width: $bp-medium-small) {
+            margin: 0 5rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin: 0 3rem;
+        }
 
         &--left {
             flex: 1 0 50%;           
@@ -70,16 +118,20 @@
             z-index: 1;
             margin-top: 10rem;
 
-            display: flex;           
+            display: flex;
+            
+            @media only screen and (max-width: $bp-medium) {
+                flex-direction: column;          
+             }
         }
     }
 
     &__form-container {
         background-image: linear-gradient(to right, rgba($color-teal, .2), rgba($color-teal, .2)), url(../img/shroom-stump.jpg);
-        background-size: cover;        
+        background-size: 100% 100%;        
         width: 100%; 
         padding: 1rem;              
-        box-shadow: -2rem 2rem 4rem rgba(0,0,0, .3); 
+        box-shadow: -2rem 2rem 4rem rgba(0,0,0, .3);
     }
 
     &__scroll-container {
@@ -88,6 +140,15 @@
         bottom: 3%;
         left: 50%;        
         transform: translateX(-50%);
+
+        @media only screen and (max-width: $bp-medium) {
+            left: 90%;        
+            transform: none;         
+        }    
+
+        @media only screen and (max-width: $bp-smallest) {
+            left: 80%;
+        }
         
         .scroll-arrow {
             position: relative;
@@ -95,7 +156,12 @@
             justify-content: center;
             width: 4rem;
             height: 4rem;            
-            animation: jump 1.2s infinite;            
+            animation: jump 1.2s infinite; 
+            
+            @media only screen and (max-width: $bp-small) {
+                width: 3rem;
+                height: 3rem;
+            }
 
             &__left-side {              
                 width: 2px;                
@@ -170,6 +236,21 @@
     flex-direction: column;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-medium) {
+        width: 50%;
+        margin: 0 auto;
+        flex-direction: row; 
+        justify-content: space-between;         
+     }
+
+     @media only screen and (max-width: $bp-medium-small) {
+        width: 80%;               
+     }
+
+     @media only screen and (max-width: $bp-smallest) {
+        width: 90%;
+    }
+
     &__icon-container {
         margin: .5rem 0;
         
@@ -182,26 +263,43 @@
         &:hover .connect__text {            
             background-color: $color-dark;                        
             box-shadow: 0 1rem 2rem rgba(0,0,0, .4);
-            transform: rotate(-10deg) scale(1.2);         
+            transform: rotate(-10deg) scale(1.2);  
+            
+            @media only screen and (max-width: $bp-smallest) {
+                transform: none;
+            }
         }  
 
         &:active .connect__text {
             transform: rotate(370deg) scale(2);
             opacity: 0;
+
+            @media only screen and (max-width: $bp-smallest) {
+                transform: none;
+            }
         }
     }
 
     &__icon {
         width: 8rem;
-        height: 8rem;        
+        height: 8rem; 
+        
+        @media only screen and (max-width: $bp-smallest) {
+            width: 6rem;
+            height: 6rem;
+        }
 
         &--twitter {
             fill: #1da1f2;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin-bottom: 1rem;         
+             }
         }
 
         &--github {
             fill: #000000;
-            margin-bottom: 1rem;
+            margin-bottom: 1rem;          
         }
 
         &--linkedIn {
