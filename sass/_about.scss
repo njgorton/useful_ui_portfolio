@@ -5,7 +5,17 @@
     margin-top: -35rem;
     padding-bottom: 15rem;
     position: relative;    
-    z-index: 1;   
+    z-index: 1; 
+    
+    @media only screen and (max-width: $bp-medium) {
+        -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 90%);            
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        -webkit-clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0 95%);            
+    }
 
     &__treeBar {  
         background-image: url(../img/tree.jpg);
@@ -14,7 +24,11 @@
         position: absolute;       
         left: 10rem;
         width: 30rem;
-        height: 100%; 
+        height: 100%;
+        
+        @media only screen and (max-width: $bp-medium-small) {
+            display: none;           
+        }
     }
  
     &__content {       
@@ -23,7 +37,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-content: center;
+        align-content: center; 
+        
+        @media only screen and (max-width: $bp-medium) {
+            padding: 3rem;
+            padding-top: 15rem;            
+        }
     } 
    
     &__header {
@@ -44,6 +63,10 @@
         .triangleR {
             width: 8rem;
         }
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none;            
+        }
     }
 
     &__leftTri {
@@ -56,6 +79,10 @@
         .triangleL {
             width: 8rem;
         }
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none;            
+        }
     }
 
     &__text {
@@ -66,6 +93,10 @@
 
         p {
             margin: 5rem 0;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin: 2rem 0;            
+            }
         }
 
         &--primary {
@@ -74,8 +105,21 @@
             display: flex;
             justify-content: flex-end;
             
+            @media only screen and (max-width: $bp-medium) {
+                flex: 0 0 100%;
+                justify-content: center;         
+            }
+            
             p {
-                width: 60%;               
+                width: 60%;
+                
+                @media only screen and (max-width: $bp-large) {
+                    width: 55%;
+                }
+
+                @media only screen and (max-width: $bp-medium) {
+                    width: 100%;            
+                }
             }
         }
 
@@ -85,21 +129,52 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @media only screen and (max-width: $bp-medium) {
+                flex: 0 0 100%;            
+            }
+
+            @media only screen and (max-width: $bp-medium-small) {
+                flex-direction: column;
+                justify-content: flex-start;           
+            }
             
             p {
-                flex: 0 0 45%;                
+                flex: 0 0 45%; 
+                
+                @media only screen and (max-width: $bp-medium) {
+                    flex: 0 0 50%;            
+                }
+
+                @media only screen and (max-width: $bp-medium-small) {
+                    flex: 0 0 35%;
+                    margin-bottom: 5rem;         
+                }
             }
             
             .imgContainer {
                 flex: 0 0 45%;
                 margin-right: 7rem;
                 position: relative;
-                perspective: 45rem;            
+                perspective: 45rem;
+                
+                @media only screen and (max-width: $bp-medium) {
+                    margin-right: 0;            
+                }
+
+                @media only screen and (max-width: $bp-medium-small) {
+                    width: 80%;           
+                }
+
+                @media only screen and (max-width: $bp-smallest) {
+                    width: 100%;           
+                }
             
                 img {                                 
                     width: 100%; 
                     height: 100%;
-                    box-shadow: 2rem 1rem 2rem rgba(0,0,0, .3); 
+                    box-shadow: 1rem 1rem 2rem rgba(0,0,0, .3);
+                    //box-shadow: 2rem 1rem 2rem rgba(0,0,0, .3); 
                     //transform: rotateY(-10deg);                  
                 }
             }  
@@ -109,8 +184,33 @@
             flex: 0 0 85%;
             justify-content: flex-end;
 
+            @media only screen and (max-width: $bp-medium) {
+                flex: 0 0 100%;            
+            }
+
+            @media only screen and (max-width: $bp-medium-small) {
+                margin-top: 5rem;
+                justify-content: flex-start;            
+            }
+
+            @media only screen and (max-width: $bp-smallest) {
+                margin-top: 10rem;            
+            }
+
+            @media only screen and (max-width: $bp-I-lied-this-is-even-smaller) {
+                margin-top: 18rem;                          
+            }
+
             p {
                 width: 50%;
+
+                @media only screen and (max-width: $bp-medium) {
+                    width: 75%;            
+                }
+
+                @media only screen and (max-width: $bp-medium-small) {
+                    width: 100%;           
+                }
             }
         }
     }

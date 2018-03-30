@@ -10,7 +10,11 @@
         font-size: 1.8rem;
         text-align: center;              
         position: relative;
-        margin: auto 0;        
+        margin: auto 10rem;
+        
+        @media only screen and (max-width: $bp-smallest) {
+            margin: auto 3rem;           
+        }
         
         &::before {
             content: "";
@@ -21,7 +25,23 @@
             top: -40%;
             left: 50%;
             -webkit-transform: translateX(-50%);
-            transform: translate(-50%);                                  
+            transform: translate(-50%);
+            
+            @media only screen and (max-width: $bp-medium) {
+                width: 80rem;            
+            }
+
+            @media only screen and (max-width: $bp-medium-small) {
+                width: 75rem;            
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                width: 60rem;            
+            }
+
+            @media only screen and (max-width: $bp-smallest) {
+                display: none;           
+            }
         }        
 
         span {

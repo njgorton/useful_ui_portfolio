@@ -10,8 +10,17 @@ html {
   font-size: 62.5%;
   font-family: 'Josefin Slab', serif;
   font-weight: 300; }
+  @media only screen and (min-width: 100em) {
+    html {
+      font-size: 75%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 55%; } }
 
 body {
+  background-color: #353535;
+  max-width: 1800px;
+  margin: 0 auto;
   overflow-x: hidden; }
 
 ::selection {
@@ -26,6 +35,14 @@ body {
   padding-bottom: 15rem;
   position: relative;
   z-index: 1; }
+  @media only screen and (max-width: 62.5em) {
+    .about {
+      -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+      clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 90%); } }
+  @media only screen and (max-width: 37.5em) {
+    .about {
+      -webkit-clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+      clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0 95%); } }
   .about__treeBar {
     background-image: url(../img/tree.jpg);
     background-size: cover;
@@ -34,12 +51,19 @@ body {
     left: 10rem;
     width: 30rem;
     height: 100%; }
+    @media only screen and (max-width: 50em) {
+      .about__treeBar {
+        display: none; } }
   .about__content {
     padding-top: 25rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center; }
+    @media only screen and (max-width: 62.5em) {
+      .about__content {
+        padding: 3rem;
+        padding-top: 15rem; } }
   .about__header {
     flex: 0 0 100%;
     font-size: 3rem;
@@ -53,6 +77,9 @@ body {
     flex: 0 0 10%; }
     .about__rightTri .triangleR {
       width: 8rem; }
+    @media only screen and (max-width: 62.5em) {
+      .about__rightTri {
+        display: none; } }
   .about__leftTri {
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
     clip-path: polygon(0 0, 0 100%, 100% 50%);
@@ -61,6 +88,9 @@ body {
     flex: 0 0 10%; }
     .about__leftTri .triangleL {
       width: 8rem; }
+    @media only screen and (max-width: 62.5em) {
+      .about__leftTri {
+        display: none; } }
   .about__text {
     font-size: 2.5rem;
     font-weight: 600;
@@ -68,33 +98,88 @@ body {
     display: flex; }
     .about__text p {
       margin: 5rem 0; }
+      @media only screen and (max-width: 62.5em) {
+        .about__text p {
+          margin: 2rem 0; } }
     .about__text--primary {
       flex: 0 0 85%;
       display: flex;
       justify-content: flex-end; }
+      @media only screen and (max-width: 62.5em) {
+        .about__text--primary {
+          flex: 0 0 100%;
+          justify-content: center; } }
       .about__text--primary p {
         width: 60%; }
+        @media only screen and (max-width: 75em) {
+          .about__text--primary p {
+            width: 55%; } }
+        @media only screen and (max-width: 62.5em) {
+          .about__text--primary p {
+            width: 100%; } }
     .about__text--secondary {
       flex: 0 0 85%;
       display: flex;
       justify-content: space-between;
       align-items: center; }
+      @media only screen and (max-width: 62.5em) {
+        .about__text--secondary {
+          flex: 0 0 100%; } }
+      @media only screen and (max-width: 50em) {
+        .about__text--secondary {
+          flex-direction: column;
+          justify-content: flex-start; } }
       .about__text--secondary p {
         flex: 0 0 45%; }
+        @media only screen and (max-width: 62.5em) {
+          .about__text--secondary p {
+            flex: 0 0 50%; } }
+        @media only screen and (max-width: 50em) {
+          .about__text--secondary p {
+            flex: 0 0 35%;
+            margin-bottom: 5rem; } }
       .about__text--secondary .imgContainer {
         flex: 0 0 45%;
         margin-right: 7rem;
         position: relative;
         perspective: 45rem; }
+        @media only screen and (max-width: 62.5em) {
+          .about__text--secondary .imgContainer {
+            margin-right: 0; } }
+        @media only screen and (max-width: 50em) {
+          .about__text--secondary .imgContainer {
+            width: 80%; } }
+        @media only screen and (max-width: 37.5em) {
+          .about__text--secondary .imgContainer {
+            width: 100%; } }
         .about__text--secondary .imgContainer img {
           width: 100%;
           height: 100%;
-          box-shadow: 2rem 1rem 2rem rgba(0, 0, 0, 0.3); }
+          box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.3); }
     .about__text--tertiary {
       flex: 0 0 85%;
       justify-content: flex-end; }
+      @media only screen and (max-width: 62.5em) {
+        .about__text--tertiary {
+          flex: 0 0 100%; } }
+      @media only screen and (max-width: 50em) {
+        .about__text--tertiary {
+          margin-top: 5rem;
+          justify-content: flex-start; } }
+      @media only screen and (max-width: 37.5em) {
+        .about__text--tertiary {
+          margin-top: 10rem; } }
+      @media only screen and (max-width: 27.5em) {
+        .about__text--tertiary {
+          margin-top: 18rem; } }
       .about__text--tertiary p {
         width: 50%; }
+        @media only screen and (max-width: 62.5em) {
+          .about__text--tertiary p {
+            width: 75%; } }
+        @media only screen and (max-width: 50em) {
+          .about__text--tertiary p {
+            width: 100%; } }
 
 @keyframes jump {
   0% {
@@ -129,6 +214,16 @@ body {
   padding-bottom: 15rem;
   margin-top: -25rem;
   position: relative; }
+  @media only screen and (max-width: 62.5em) {
+    .contact {
+      -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+      clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+      margin-top: -20rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .contact {
+      -webkit-clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
+      clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
+      margin-top: -15rem; } }
   .contact__shroomBar {
     background-image: url(../img/shroom-tree.jpg);
     background-size: cover;
@@ -137,6 +232,9 @@ body {
     right: 10rem;
     width: 30rem;
     height: 100%; }
+    @media only screen and (max-width: 62.5em) {
+      .contact__shroomBar {
+        display: none; } }
   .contact__header--primary {
     background-color: #232323;
     color: #f5f1ed;
@@ -148,24 +246,48 @@ body {
     margin-top: 25rem;
     margin-bottom: 10rem;
     box-shadow: -2rem 2rem 4rem rgba(0, 0, 0, 0.2); }
+    @media only screen and (max-width: 62.5em) {
+      .contact__header--primary {
+        margin-top: 20rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .contact__header--primary {
+        margin-top: 15rem; } }
   .contact__header--secondary {
     color: #f5f1ed;
     font-size: 3rem;
     text-align: center;
     width: 100%;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__header--secondary {
+        font-size: 2.5rem; } }
   .contact__header--tertiary {
     text-align: center;
     margin: auto 0;
     width: 50%;
     color: #f5f1ed;
     font-size: 3rem; }
+    @media only screen and (max-width: 62.5em) {
+      .contact__header--tertiary {
+        margin: 0 auto;
+        margin-bottom: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .contact__header--tertiary {
+        font-size: 2.5rem; } }
   .contact__container {
     margin: 0 10rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
+    @media only screen and (max-width: 62.5em) {
+      .contact__container {
+        flex-direction: column; } }
+    @media only screen and (max-width: 50em) {
+      .contact__container {
+        margin: 0 5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .contact__container {
+        margin: 0 3rem; } }
     .contact__container--left {
       flex: 1 0 50%;
       display: flex;
@@ -176,9 +298,12 @@ body {
       z-index: 1;
       margin-top: 10rem;
       display: flex; }
+      @media only screen and (max-width: 62.5em) {
+        .contact__container--right {
+          flex-direction: column; } }
   .contact__form-container {
     background-image: linear-gradient(to right, rgba(29, 104, 88, 0.2), rgba(29, 104, 88, 0.2)), url(../img/shroom-stump.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
     width: 100%;
     padding: 1rem;
     box-shadow: -2rem 2rem 4rem rgba(0, 0, 0, 0.3); }
@@ -188,6 +313,13 @@ body {
     bottom: 3%;
     left: 50%;
     transform: translateX(-50%); }
+    @media only screen and (max-width: 62.5em) {
+      .contact__scroll-container {
+        left: 90%;
+        transform: none; } }
+    @media only screen and (max-width: 37.5em) {
+      .contact__scroll-container {
+        left: 80%; } }
     .contact__scroll-container .scroll-arrow {
       position: relative;
       display: flex;
@@ -195,6 +327,10 @@ body {
       width: 4rem;
       height: 4rem;
       animation: jump 1.2s infinite; }
+      @media only screen and (max-width: 43.75em) {
+        .contact__scroll-container .scroll-arrow {
+          width: 3rem;
+          height: 3rem; } }
       .contact__scroll-container .scroll-arrow__left-side {
         width: 2px;
         background-color: #f5f1ed;
@@ -250,6 +386,18 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media only screen and (max-width: 62.5em) {
+    .connect {
+      width: 50%;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between; } }
+  @media only screen and (max-width: 50em) {
+    .connect {
+      width: 80%; } }
+  @media only screen and (max-width: 37.5em) {
+    .connect {
+      width: 90%; } }
   .connect__icon-container {
     margin: .5rem 0; }
     .connect__icon-container:link, .connect__icon-container:visited {
@@ -259,14 +407,27 @@ body {
       background-color: #232323;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
       transform: rotate(-10deg) scale(1.2); }
+      @media only screen and (max-width: 37.5em) {
+        .connect__icon-container:hover .connect__text {
+          transform: none; } }
     .connect__icon-container:active .connect__text {
       transform: rotate(370deg) scale(2);
       opacity: 0; }
+      @media only screen and (max-width: 37.5em) {
+        .connect__icon-container:active .connect__text {
+          transform: none; } }
   .connect__icon {
     width: 8rem;
     height: 8rem; }
+    @media only screen and (max-width: 37.5em) {
+      .connect__icon {
+        width: 6rem;
+        height: 6rem; } }
     .connect__icon--twitter {
       fill: #1da1f2; }
+      @media only screen and (max-width: 62.5em) {
+        .connect__icon--twitter {
+          margin-bottom: 1rem; } }
     .connect__icon--github {
       fill: #000000;
       margin-bottom: 1rem; }
@@ -293,7 +454,10 @@ body {
     font-size: 1.8rem;
     text-align: center;
     position: relative;
-    margin: auto 0; }
+    margin: auto 10rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__text {
+        margin: auto 3rem; } }
     .footer__text::before {
       content: "";
       display: block;
@@ -304,6 +468,18 @@ body {
       left: 50%;
       -webkit-transform: translateX(-50%);
       transform: translate(-50%); }
+      @media only screen and (max-width: 62.5em) {
+        .footer__text::before {
+          width: 80rem; } }
+      @media only screen and (max-width: 50em) {
+        .footer__text::before {
+          width: 75rem; } }
+      @media only screen and (max-width: 43.75em) {
+        .footer__text::before {
+          width: 60rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .footer__text::before {
+          display: none; } }
     .footer__text span {
       color: #1d6858;
       font-family: sans-serif; }
@@ -342,6 +518,16 @@ body {
     font-weight: 300;
     top: 10%;
     left: 15%; }
+    @media only screen and (max-width: 62.5em) {
+      .header__primary {
+        font-size: 5.5rem; } }
+    @media only screen and (max-width: 50em) {
+      .header__primary {
+        font-size: 5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__primary {
+        font-size: 4rem;
+        left: 5%; } }
   .header__secondary {
     position: absolute;
     font-weight: 300; }
@@ -349,23 +535,73 @@ body {
       font-size: 5rem;
       top: 30%;
       left: 30%; }
+      @media only screen and (max-width: 62.5em) {
+        .header__secondary--1 {
+          font-size: 4.5rem;
+          left: 25%; } }
+      @media only screen and (max-width: 50em) {
+        .header__secondary--1 {
+          font-size: 4rem; } }
+      @media only screen and (max-width: 43.75em) {
+        .header__secondary--1 {
+          left: 15%; } }
+      @media only screen and (max-width: 37.5em) {
+        .header__secondary--1 {
+          font-size: 3.5rem;
+          top: 25%;
+          left: 10%; } }
     .header__secondary--2 {
       font-size: 4rem;
-      top: 60%;
+      top: 65%;
       left: 30%;
       display: inline-block;
       opacity: 0;
       animation: header-sec--2-slide-up .8s 1.5s ease-out forwards; }
+      @media only screen and (max-width: 62.5em) {
+        .header__secondary--2 {
+          font-size: 3.5rem;
+          left: 25%; } }
+      @media only screen and (max-width: 50em) {
+        .header__secondary--2 {
+          font-size: 3rem; } }
+      @media only screen and (max-width: 43.75em) {
+        .header__secondary--2 {
+          left: 15%; } }
+      @media only screen and (max-width: 37.5em) {
+        .header__secondary--2 {
+          font-size: 2.5rem;
+          left: 10%;
+          top: 70%; } }
   .header__tertiary {
     position: absolute;
     font-size: 3rem;
     top: 40%;
     left: 45%; }
+    @media only screen and (max-width: 62.5em) {
+      .header__tertiary {
+        font-size: 2.5rem;
+        left: 40%; } }
+    @media only screen and (max-width: 50em) {
+      .header__tertiary {
+        font-size: 2rem; } }
+    @media only screen and (max-width: 43.75em) {
+      .header__tertiary {
+        left: 30%; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__tertiary {
+        font-size: 2rem;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%); } }
     .header__tertiary--1 {
       font-weight: 300;
+      padding-bottom: .5rem;
       display: inline-block;
       opacity: 0;
       animation: header-tert-slide-in-left .8s .5s ease-out forwards; }
+      @media only screen and (max-width: 37.5em) {
+        .header__tertiary--1 {
+          padding-bottom: 1rem; } }
     .header__tertiary--2 {
       font-weight: 300;
       display: block;
@@ -384,6 +620,10 @@ body {
       width: 4rem;
       height: 4rem;
       animation: jump 1.2s infinite; }
+      @media only screen and (max-width: 43.75em) {
+        .header__scroll-container .scroll-arrow {
+          width: 3rem;
+          height: 3rem; } }
       .header__scroll-container .scroll-arrow__left-side {
         width: 2px;
         background-color: #f5f1ed;
@@ -401,6 +641,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  max-width: 1800px;
   height: 7rem;
   z-index: 1000;
   background-color: #232323;
@@ -452,7 +693,7 @@ body {
 
 .projects {
   background-image: url(../img/grunge.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
   height: 100%;
   margin-top: -30rem;
   padding-top: 30rem;
@@ -555,22 +796,51 @@ body {
 
 .skills {
   display: flex; }
+  @media only screen and (max-width: 62.5em) {
+    .skills {
+      flex-direction: column; } }
   .skills__left {
     background-color: #1d6858;
-    color: black; }
+    color: black;
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (max-width: 62.5em) {
+      .skills__left {
+        flex-direction: row;
+        padding: 3rem; } }
+    @media only screen and (max-width: 43.75em) {
+      .skills__left {
+        flex-direction: column; } }
   .skills__right {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(../img/tools.jpg);
     background-size: cover;
     color: #f5f1ed; }
+    @media only screen and (max-width: 62.5em) {
+      .skills__right {
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/tools.jpg); } }
   .skills__whatIDo {
     margin: 5rem; }
+    @media only screen and (max-width: 62.5em) {
+      .skills__whatIDo {
+        margin: 0; } }
   .skills__mySkills {
     margin: 50% 8rem; }
+    @media only screen and (max-width: 62.5em) {
+      .skills__mySkills {
+        margin: 3rem;
+        margin-bottom: 40rem; } }
   .skills__header-primary {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin: 3rem 0; }
+    @media only screen and (max-width: 62.5em) {
+      .skills__header-primary {
+        margin: 0;
+        margin-bottom: 4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .skills__header-primary {
+        margin-bottom: 2rem; } }
   .skills__header-secondary {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin: 2rem 0; }
   .skills__text {
     font-size: 2.5rem;
@@ -585,3 +855,15 @@ body {
     width: 15%;
     height: 15%;
     margin: 2rem; }
+    @media only screen and (max-width: 62.5em) {
+      .iconBox__icon {
+        width: 20%;
+        height: 20%; } }
+    @media only screen and (max-width: 43.75em) {
+      .iconBox__icon {
+        width: 10%;
+        height: 10%; } }
+    @media only screen and (max-width: 37.5em) {
+      .iconBox__icon {
+        width: 15%;
+        height: 15%; } }

@@ -1,6 +1,7 @@
 // AOS SETTINGS
-AOS.init({
-  duration: 800
+AOS.init({  
+  duration: 800, 
+  disable: window.innerWidth < 1001  
  });
 
 //============================CARD FLIP ON CLICK==============================
@@ -32,7 +33,7 @@ $("#section-home").click(function() {
 // SKILLS
 $("#section-skills").click(function() { 
   $('html, body').animate({
-    scrollTop: $("#skills").offset().top-65
+    scrollTop: $("#skills").offset().top-60
   }, 1000);
   target.focus(); // Setting focus
   if (target.is(":focus")){ // Checking if the target was focused
@@ -92,7 +93,7 @@ $("#section-contact").click(function() {
 // DOWN-ARROW
 $("#down-arrow").click(function() { 
   $('html, body').animate({
-    scrollTop: $("#skills").offset().top-65
+    scrollTop: $("#skills").offset().top-60
   }, 1000);
   target.focus(); // Setting focus
   if (target.is(":focus")){ // Checking if the target was focused

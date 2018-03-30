@@ -24,6 +24,19 @@
         font-weight: 300;       
         top: 10%;
         left: 15%;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 5.5rem;
+        }
+
+        @media only screen and (max-width: $bp-medium-small) {
+            font-size: 5rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 4rem;
+            left: 5%;
+        }
     }
 
     &__secondary {
@@ -34,15 +47,53 @@
             font-size: 5rem;         
             top: 30%; 
             left: 30%;
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 4.5rem;
+                left: 25%;
+            }
+
+            @media only screen and (max-width: $bp-medium-small) {
+                font-size: 4rem;                
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                left: 15%;               
+            }
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 3.5rem;
+                top: 25%;
+                left: 10%;
+            }
         }
 
         &--2 {  
             font-size: 4rem;          
-            top: 60%;
+            top: 65%;
             left: 30%;  
             display: inline-block;
             opacity: 0;
             animation: header-sec--2-slide-up .8s 1.5s ease-out forwards; 
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 3.5rem;
+                left: 25%;
+            }
+
+            @media only screen and (max-width: $bp-medium-small) {
+                font-size: 3rem;                
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                left: 15%;               
+            }
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 2.5rem;
+                left: 10%;
+                top: 70%;                
+            }
         }
     }
 
@@ -50,13 +101,38 @@
         position: absolute;
         font-size: 3rem;
         top: 40%;
-        left: 45%;        
+        left: 45%; 
+        
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 2.5rem;
+            left: 40%;
+        }
+
+        @media only screen and (max-width: $bp-medium-small) {
+            font-size: 2rem;            
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            left: 30%;               
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 2rem;
+            top: 35%;
+            left: 50%;
+            transform: translateX(-50%);           
+        }
 
         &--1 {
             font-weight: 300;
+            padding-bottom: .5rem;
             display: inline-block;
             opacity: 0;
-            animation: header-tert-slide-in-left .8s .5s ease-out forwards;   
+            animation: header-tert-slide-in-left .8s .5s ease-out forwards; 
+            
+            @media only screen and (max-width: $bp-smallest) {
+                padding-bottom: 1rem;
+            }
         }
 
         &--2 {
@@ -80,7 +156,12 @@
             justify-content: center;
             width: 4rem;
             height: 4rem;            
-            animation: jump 1.2s infinite;            
+            animation: jump 1.2s infinite;  
+            
+            @media only screen and (max-width: $bp-small) {
+                width: 3rem;
+                height: 3rem;               
+            }
 
             &__left-side {              
                 width: 2px;                
