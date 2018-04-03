@@ -1,10 +1,9 @@
 .projects {
-    background-image: url(../img/grunge.jpg);
-    background-size: 100% 100%;
+    background-color: $color-teal;
     height: 100%;
     margin-top: -30rem;
     padding-top: 30rem;
-    padding-bottom: 20rem;   
+    padding-bottom: 20rem; 
 
     &__header {
         background-color: rgba(0,0,0, .5);
@@ -14,7 +13,7 @@
         margin: auto;
         padding: 5% 0;
         text-align: center;
-        box-shadow: -2rem 4rem 4rem rgba(0,0,0, .3);
+        box-shadow: -1rem 2rem 2rem rgba(0,0,0, .25);
     }
 
     &__container {
@@ -45,7 +44,7 @@
             left: 0;            
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;         
-            box-shadow: -2rem 4rem 4rem rgba(0,0,0, .5);
+            box-shadow: -1rem 2rem 2rem rgba(0,0,0, .25);
             transition: all 1s ease;
 
             &--front {               

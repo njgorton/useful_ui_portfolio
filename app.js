@@ -1,11 +1,10 @@
 // AOS SETTINGS
 AOS.init({  
   duration: 800, 
-  disable: window.innerWidth < 1001  
+  disable: window.innerWidth < 801  
  });
 
 //============================CARD FLIP ON CLICK==============================
-
 $('document').ready(function() {
   $('.card__btn--flip').on('click', function(e) {
     $(e.target).closest('.card').toggleClass('card__flip');
@@ -13,8 +12,24 @@ $('document').ready(function() {
 });
 
 
-//==============================NAV SCROLLING==================================
+//============================RESPONSIVE NAV MENU==============================
+$('document').ready(function() {
+  $('#nav-toggle').on('click', function(event) {
+    event.stopPropagation();
+    this.classList.toggle('active');
+    $('.navigation__list').slideToggle();
+  });
 
+  $('html').click(function() {
+    if($('#nav-toggle').hasClass('active')) {
+      $('#nav-toggle').removeClass('active');
+      $('.navigation__list').slideToggle();
+    }
+  });
+});
+
+
+//==============================NAV SCROLLING==================================
 // HOME
 $("#section-home").click(function() {  
   $('html, body').animate({
@@ -124,65 +139,64 @@ $("#up-arrow").click(function() {
 //==========================ACTIVE STATE ON SCROLL=============================
 
 // HOME --default active
-$('#section-home').addClass("active");
+$('#section-home').addClass("active-underline");
 
 // SKILLS
 $('#skills').waypoint(function(direction) {
   if (direction === 'down') {
-    $("nav a").removeClass("active");
-    $("#section-skills").addClass("active");
+    $("nav a").removeClass("active-underline");
+    $("#section-skills").addClass("active-underline");
   }
 }, { offset: '66' });
 
 $('#skills').waypoint(function(direction) {
   if (direction === 'up') {    
-    $("nav a").removeClass("active");
-    $("#section-home").addClass("active");
+    $("nav a").removeClass("active-underline");
+    $("#section-home").addClass("active-underline");
   }
 }, { offset: '75%' });
 
 // ABOUT
 $('#about').waypoint(function(direction) {
   if (direction === 'down') {
-    $("nav a").removeClass("active");
-    $("#section-about").addClass("active");
+    $("nav a").removeClass("active-underline");
+    $("#section-about").addClass("active-underline");
   }
 }, { offset: '86' });
 
 $('#about').waypoint(function(direction) {
   if (direction === 'up') {    
-    $("nav a").removeClass("active");
-    $("#section-skills").addClass("active");
+    $("nav a").removeClass("active-underline");
+    $("#section-skills").addClass("active-underline");
   }
 }, { offset: '75%' });
 
 // PROJECTS
 $('#projects').waypoint(function(direction) {
   if (direction === 'down') {
-    $("nav a").removeClass("active");
-    $("#section-projects").addClass("active");
+    $("nav a").removeClass("active-underline");
+    $("#section-projects").addClass("active-underline");
   }
 }, { offset: '86' });
 
 $('#projects').waypoint(function(direction) {
   if (direction === 'up') {    
-    $("nav a").removeClass("active");
-    $("#section-about").addClass("active");
+    $("nav a").removeClass("active-underline");
+    $("#section-about").addClass("active-underline");
   }
 }, { offset: '75%' });
 
 // CONTACT
 $('#contact').waypoint(function(direction) {
   if (direction === 'down') {
-    $("nav a").removeClass("active");
-    $("#section-contact").addClass("active");
+    $("nav a").removeClass("active-underline");
+    $("#section-contact").addClass("active-underline");
   }
 }, { offset: '86' });
 
 $('#contact').waypoint(function(direction) {
   if (direction === 'up') {    
-    $("nav a").removeClass("active");
-    $("#section-projects").addClass("active");
+    $("nav a").removeClass("active-underline");
+    $("#section-projects").addClass("active-underline");
   }
 }, { offset: '75%' });
-
