@@ -2,14 +2,19 @@
     position: fixed;
     top: 0;
     width: 100%;
-    max-width: 1800px; // body max-width    
+    max-width: 1800px; // body max-width   
     height: 7rem;
     z-index: 1000;
     background-color: $color-dark;
     color: $color-white;
 
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between; 
+    
+    @media only screen and (max-width: $bp-medium) {
+        height: auto;
+        flex-direction: column;       
+    }
 
     &__profile {
         flex: 1;
@@ -18,8 +23,7 @@
         align-items: center;   
     }
     
-    &__img {
-        background-color: darkcyan;
+    &__img {        
         width: 7rem;
         height: 7rem;
         margin-left: 3rem;
@@ -35,18 +39,26 @@
             margin-left: 3rem; 
             padding: 0 .5rem;  
             display: inline-block;          
-            transition: all .1s;
+            transition: all .1s;          
         } 
     }
 
     &__list {
+        display: none;
         flex: 2;
         list-style: none;
-        margin-right: 3rem;
-
-        display: flex;
+        margin-right: 3rem;        
         justify-content: space-around;
-        align-items: center;        
+        align-items: center;    
+        
+        @media only screen and (min-width: $bp-medium) {
+            display: flex !important;           
+        }
+
+        @media only screen and (max-width: $bp-medium) {            
+            margin: 0 auto; 
+            margin-bottom: 3rem;     
+        }
     }
 
     &__link {
@@ -58,10 +70,15 @@
             padding: .5rem;
             display: inline-block;          
             transition: all .1s;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin: 1rem 0; 
+                font-size: 3rem;     
+            }
         }        
     }
 
-    & a:hover {
+    & a:not(#nav-toggle):hover {
         background-color: $color-blue;
         box-shadow: 0 1rem 1rem rgba(0,0,0, .4);        
         transform: translateY(-3px);
@@ -71,9 +88,79 @@
         box-shadow: 0 .5rem 1rem rgba(0,0,0, .4);
         transform: translateY(0);
     }
+
+    &__mobile {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: $color-dark;
+        height: 7rem;
+        width: 7rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            // Hamburger nav only visible under 1000px vw            
+            display: block;        
+        }
+    }
 }
 
-.active {
+.active-underline {
     border-bottom: 2px solid $color-teal;
-  }
+}
 
+#nav-toggle {
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    cursor: pointer;
+    padding: 1rem 3.5rem 1.5rem 0;
+
+    span,
+    span::before,
+    span::after {
+        cursor: pointer;
+        height: 2px;
+        width: 4rem;
+        background: $color-white;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: transform .3s ease-in-out, hover .3s ease;
+    }
+
+    span::before {
+        top: -1rem;      
+    }
+
+    span::after {
+        bottom: -1rem;      
+    }
+
+    &:hover span::before {
+        top: -1.2rem;
+        height: 1px;
+    }
+
+    &:hover span::after {
+        top: 1.2rem;
+    }
+      
+    &.active span {
+        background-color: transparent;
+        
+        &::before,
+        &::after {
+            top: 0;
+            height: 2px;
+        }
+        
+        &::before {
+            transform: rotate(135deg);
+        }
+
+        &::after {
+            transform: rotate(-135deg);
+        }
+    }
+}
