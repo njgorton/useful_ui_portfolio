@@ -810,11 +810,16 @@ body {
     transform: rotateY(-180deg); }
   .card__flip .card__side--back {
     transform: rotateY(0); }
-  .card__iframe {
+  .card__screenshot {
     width: 90%;
     height: 80%;
     margin: 1.5rem;
     margin-bottom: .5rem; }
+  .card__scroll {
+    overflow-y: scroll; }
+  .card__no-scroll {
+    width: 100%;
+    height: 100%; }
   .card__btn {
     display: block;
     background-color: #1c3144;
@@ -874,11 +879,7 @@ body {
     flex-direction: column; }
     @media only screen and (max-width: 62.5em) {
       .skills__left {
-        flex-direction: row;
         padding: 3rem; } }
-    @media only screen and (max-width: 43.75em) {
-      .skills__left {
-        flex-direction: column; } }
   .skills__right {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(../img/tools.jpg);
     background-size: cover;
@@ -922,20 +923,23 @@ body {
   padding-bottom: 40rem; }
   @media only screen and (max-width: 62.5em) {
     .iconBox {
-      padding-bottom: 0; } }
+      padding: 0 10rem; } }
+  @media only screen and (max-width: 50em) {
+    .iconBox {
+      padding: 0; } }
   .iconBox__icon {
-    width: 15%;
-    height: 15%;
+    width: 10rem;
+    height: 10rem;
     margin: 2rem; }
     @media only screen and (max-width: 62.5em) {
       .iconBox__icon {
-        width: 20%;
-        height: 20%; } }
+        width: 8rem;
+        height: 8rem; } }
     @media only screen and (max-width: 43.75em) {
       .iconBox__icon {
-        width: 10%;
-        height: 10%; } }
+        width: 7rem;
+        height: 7rem; } }
     @media only screen and (max-width: 37.5em) {
       .iconBox__icon {
-        width: 15%;
-        height: 15%; } }
+        width: 7.5rem;
+        height: 7.5rem; } }
