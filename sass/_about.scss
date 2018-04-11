@@ -75,6 +75,7 @@
         background-color: $color-blue;
         margin-right: 1rem;
         flex: 0 0 10%;
+        will-change: transform;
 
         .triangleL {
             width: 8rem;
@@ -156,14 +157,16 @@
                 flex: 0 0 45%;
                 margin-right: 7rem;
                 position: relative;
-                //perspective: 45rem;
+                perspective: 55rem;
                 
                 @media only screen and (max-width: $bp-medium) {
-                    margin-right: 0;            
+                    margin-right: 2rem;            
                 }
 
                 @media only screen and (max-width: $bp-medium-small) {
-                    width: 80%;           
+                    width: 80%;  
+                    margin-right: 0; 
+                    perspective: none;        
                 }
 
                 @media only screen and (max-width: $bp-smallest) {
@@ -172,10 +175,14 @@
             
                 img {                                 
                     width: 100%; 
-                    height: 100%;
-                    box-shadow: 1rem 1rem 2rem rgba(0,0,0, .3);
-                    //box-shadow: 2rem 1rem 2rem rgba(0,0,0, .3); 
-                    //transform: rotateY(-10deg);                  
+                    height: 100%;                    
+                    box-shadow: 2rem 1rem 2rem rgba(0,0,0, .3); 
+                    transform: rotateY(-7deg); 
+                    
+                    @media only screen and (max-width: $bp-medium-small) {
+                        transform: none;
+                        box-shadow: 1rem 1rem 2rem rgba(0,0,0, .3);           
+                    }
                 }
             }  
         }
