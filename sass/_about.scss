@@ -177,7 +177,8 @@
                     width: 100%; 
                     height: 100%;                    
                     box-shadow: 2rem 1rem 2rem rgba(0,0,0, .3); 
-                    transform: rotateY(-7deg); 
+                    transform: rotateY(-7deg);
+                    filter: brightness(.8); 
                     
                     @media only screen and (max-width: $bp-medium-small) {
                         transform: none;

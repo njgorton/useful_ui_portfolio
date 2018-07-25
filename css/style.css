@@ -159,7 +159,8 @@ body {
           width: 100%;
           height: 100%;
           box-shadow: 2rem 1rem 2rem rgba(0, 0, 0, 0.3);
-          transform: rotateY(-7deg); }
+          transform: rotateY(-7deg);
+          filter: brightness(0.8); }
           @media only screen and (max-width: 50em) {
             .about__text--secondary .imgContainer img {
               transform: none;
@@ -678,7 +679,8 @@ body {
   .navigation__img {
     width: 7rem;
     height: 7rem;
-    margin-left: 3rem; }
+    margin-left: 3rem;
+    filter: brightness(0.8); }
   .navigation__home:link, .navigation__home:visited {
     color: currentColor;
     text-decoration: none;
