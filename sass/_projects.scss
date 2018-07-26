@@ -196,29 +196,29 @@
                 margin: 1.5rem; 
                 padding-bottom: 3rem;               
             }
-           
+
             &--1 {
-                background: linear-gradient(to right bottom, #55c57a, #28b845);
+                background: linear-gradient(to right bottom, #f29130, #f29130 * .6);
             }
 
             &--2 {
-                background: linear-gradient(to right bottom, #ff3366, #ba265d);
+                background: linear-gradient(to right bottom, #af8640 * 1.3, #af8640 * .8);
             }
-
+           
             &--3 {
-                background: linear-gradient(to right bottom, #c69963 * 1.3, #c69963);
+                background: linear-gradient(to right bottom, #55c57a, #28b845);
             }
 
             &--4 {
-                background: linear-gradient(to right bottom, #2e6da4 * 1.5, #2e6da4);
+                background: linear-gradient(to right bottom, #ff3366, #ba265d);
             }
 
             &--5 {
-                background: linear-gradient(to right bottom, #9296A2 * 1.3,#9296A2, #232323 * 1.1);
+                background: linear-gradient(to right bottom, #c69963 * 1.3, #c69963);
             }
 
             &--6 {
-                background: linear-gradient(to right bottom, #FBD02A * 1.5, #FBD02A * .5);
+                background: linear-gradient(to right bottom, #2e6da4 * 1.5, #2e6da4);
             }
         }
     }
