@@ -364,6 +364,7 @@ body {
     background-color: #232323;
     color: #f5f1ed;
     font-family: sans-serif;
+    font-size: 1.7rem;
     width: 100%;
     border: none;
     padding: 1rem; }
@@ -921,15 +922,18 @@ body {
     .card__details--1 {
       background: linear-gradient(to right bottom, #f29130, #91571d); }
     .card__details--2 {
-      background: linear-gradient(to right bottom, #e4ae53, #8c6b33); }
+      background: linear-gradient(to right bottom, #1a76cc, #0D3B66); }
     .card__details--3 {
-      background: linear-gradient(to right bottom, #55c57a, #28b845); }
+      background: linear-gradient(to right bottom, #e4ae53, #8c6b33); }
     .card__details--4 {
-      background: linear-gradient(to right bottom, #ff3366, #ba265d); }
+      background: linear-gradient(to right bottom, #55c57a, #28b845); }
     .card__details--5 {
-      background: linear-gradient(to right bottom, #ffc781, #c69963); }
+      background: linear-gradient(to right bottom, #ff3366, #ba265d); }
     .card__details--6 {
-      background: linear-gradient(to right bottom, #45a4f6, #2e6da4); }
+      background: linear-gradient(to right bottom, #ffc781, #c69963); }
+
+#cardImgStretch {
+  height: 100%; }
 
 .skills {
   display: flex; }
